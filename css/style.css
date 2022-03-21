@@ -826,16 +826,14 @@ main .contact1 .contact__inner .content__top .present .txt__box .present__txt .s
 main .contact1 .contact__inner .content__top .present .img__box {
   display: flex;
   align-items: flex-end;
-}
-@media screen and (max-width: 450px) {
-  main .contact1 .contact__inner .content__top .present .img__box {
-    position: relative;
-  }
+  position: relative;
 }
 main .contact1 .contact__inner .content__top .present .img__box .figcap {
   width: 100px;
   color: #fff;
   position: absolute;
+  left: -90%;
+  bottom: 10%;
 }
 @media screen and (max-width: 450px) {
   main .contact1 .contact__inner .content__top .present .img__box .figcap {
@@ -979,8 +977,8 @@ main .qa .qa__inner .qa__content .content__item {
 main .qa .qa__inner .qa__content .content__item .q__item {
   display: flex;
   align-items: center;
-  height: 60px;
-  padding: 0 32px;
+  min-height: 60px;
+  padding: 16px 32px;
   background-image: linear-gradient(to right, #181818, #181818 1px, transparent 1px, transparent 3px);
   background-size: 8px 2px;
   background-position: left top;
@@ -1006,8 +1004,8 @@ main .qa .qa__inner .qa__content .content__item .q__item .q__txt {
 main .qa .qa__inner .qa__content .content__item .a__item {
   display: flex;
   align-items: center;
-  padding: 0 32px;
-  height: 100px;
+  padding: 16px 32px;
+  min-height: 100px;
   background-image: linear-gradient(to right, #181818, #181818 1px, transparent 1px, transparent 3px);
   background-size: 8px 2px;
   background-position: left top;
@@ -1210,16 +1208,14 @@ main .contact2 .contact__inner .content__top .present .txt__box .present__txt .s
 main .contact2 .contact__inner .content__top .present .img__box {
   display: flex;
   align-items: flex-end;
-}
-@media screen and (max-width: 450px) {
-  main .contact2 .contact__inner .content__top .present .img__box {
-    position: relative;
-  }
+  position: relative;
 }
 main .contact2 .contact__inner .content__top .present .img__box .figcap {
   width: 100px;
   color: #fff;
   position: absolute;
+  left: -90%;
+  bottom: 10%;
 }
 @media screen and (max-width: 450px) {
   main .contact2 .contact__inner .content__top .present .img__box .figcap {
