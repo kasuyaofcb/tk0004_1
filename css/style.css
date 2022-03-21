@@ -435,7 +435,11 @@ main .tutor .tutoris__img {
   top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 300px;
+}
+@media screen and (max-width: 450px) {
+  main .tutor .tutoris__img {
+    max-width: 300px;
+  }
 }
 main .tutor .tutor__img--sp {
   display: none;
