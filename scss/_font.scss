@@ -1,0 +1,10 @@
+/* フォント============================== */
+$basic: "MS UI Gothic", YuGothic, "Yu Gothic", "ヒラギノ角ゴシック",
+  "Hiragino Sans", sans-serif;
+
+  html{
+    font-size: 62.5%;
+  /*   @media screen and (max-width:$tab){
+      font-size: 50%;
+    } */
+  }

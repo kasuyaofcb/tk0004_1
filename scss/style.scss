@@ -1,0 +1,975 @@
+@use "reset";
+@use "color";
+@use "import" as f;
+
+body {
+  font-family: f.$basic;
+  color: f.$txt-color;
+  font-feature-settings: "palt";
+  background-color: #fff;
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* ここから共通部分============================== */
+
+
+
+
+/* h1タイトル部分 */
+
+h1 {
+  font-size: 12.6rem;
+  color: f.$white_color;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+
+/* h2タイトル部分 */
+
+h2 {
+  font-size: 3.4rem;
+  color: f.$white_color;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 1.5;
+} //.h2
+
+p, button {
+  font-style: normal;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  font-size: 16px;
+  color: f.$txt-color;
+}
+
+.change_white {
+  background: f.$white-color;
+  transition: 0.5s;
+}
+
+.txt--red {
+  color: f.$red-color;
+}
+
+.w48 {
+  font-size: 4.8rem;
+}
+
+.w24 {
+  font-size: 2.4rem;
+}
+
+.txt--brown {
+  color: f.$arrow_gold-color;
+}
+
+.txt--dark-brown {
+  color: f.$arrow_gold-color;
+}
+
+.sp__br {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .pc__br {
+    display: none;
+  }
+  .sp__br {
+    display: block;
+  }
+}
+
+
+/* ここまで共通部分============================== */
+
+
+/* ============================== */
+
+
+/* ここからメイン部分============================== */
+
+main {
+  /* セミナー内容の部分============================== */
+  .detail {
+    background-image: url(../img/bg_murai_07.jpg);
+    background-size: cover;
+    .detail__inner {
+      margin: 0 auto;
+      padding: 110px 32px 140px;
+      max-width: 1000px;
+      @media screen and (max-width: 450px) {
+        padding: 64px 32px 80px;
+      }
+      .detail__title {
+        color: f.$white-color;
+        font-size: 3.4rem;
+        margin-bottom: 64px;
+        @media screen and (max-width: 450px) {
+          font-size: 2rem;
+          margin-bottom: 24px;
+        }
+      }
+      .detail__content {
+        .content__item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid f.$white-color;
+          padding-top: 38px;
+          padding-bottom: 70px;
+          @media screen and (max-width: 450px) {
+            flex-direction: column;
+            text-align: justify;
+          }
+          .left__area {
+            margin-right: 56px;
+            @media screen and (max-width: 450px) {
+              margin: 0px auto 32px;
+            }
+          }
+          .right__area {
+            flex: 1;
+            max-width: 660px;
+            .txt__top {
+              margin-bottom: 16px;
+            }
+          }
+          &:last-child {
+            @media screen and (max-width: 450px) {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* 講師紹介の部分============================== */
+  .tutor {
+    background-image: url(../img/bg_murai_08.jpg);
+    background-size: cover;
+    background-position: right;
+    position: relative;
+    @media screen and (max-width: 950px) {
+      background-position: top 50% right 20%;
+    }
+    @media screen and (max-width: 700px) {
+      background-position: top 50% right 25%;
+    }
+    @media screen and (max-width: 450px) {
+      background-image: none;
+    }
+    .tutoris__img {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 300px;
+    }
+    .tutor__img--sp {
+      display: none;
+      @media screen and (max-width: 450px) {
+        display: block;
+        width: 100%;
+      }
+    }
+    .tutor__inner {
+      max-width: 1000px;
+      padding-top: 110px;
+      padding: 110px 32px 56px;
+      padding-bottom: 56px;
+      margin: 0 auto;
+      display: flex;
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+      .tutor__content {
+        max-width: 570px;
+        font-size: 1.8rem;
+        flex: 1;
+        .txt__top {
+          color: f.$arrow_gold-color;
+          margin-bottom: 50px;
+        }
+        .name {
+          font-size: 2.8rem;
+          margin-bottom: 26px;
+        }
+        .bottom__box {
+          @media screen and (max-width: 1000px) {
+            width: 450px;
+          }
+          @media screen and (max-width: 660px) {
+            width: 350px;
+          }
+          @media screen and (max-width: 500px) {
+            width: 300px;
+          }
+          .txt__bottom {
+            margin-bottom: 26px;
+          }
+        }
+        .book {
+          margin-top: 100px;
+          .book__box {
+            display: flex;
+            .book__item {
+              display: flex;
+              align-items: flex-end;
+              margin-right: 24px;
+              .book__title {
+                font-size: 1.8rem;
+                width: 180px;
+                .book__subtitle {
+                  display: block;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                  font-size: 1.6rem;
+                }
+              }
+              .book__img {
+                width: 100px;
+              }
+            }
+          }
+        }
+        .tutor__space {
+          width: 500px;
+        }
+      }
+    }
+    .tutor__inner--sp {
+      display: none;
+      padding: 48px 0 0;
+      @media screen and (max-width: 450px) {
+        display: block;
+      }
+      .tutor__txt--sp {
+        padding: 0 32px;
+        .name {
+          font-size: 2rem;
+          margin-bottom: 16px;
+        }
+        .bottom__box {
+          text-align: justify;
+        }
+        .txt__bottom {
+          margin-bottom: 24px;
+        }
+      }
+      .book--sp {
+        background-color: f.$bage-color;
+        padding: 40px 32px;
+        .book__item {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          margin-bottom: 32px;
+          .book__title {
+            font-size: 2rem;
+            .book__subtitle {
+              display: block;
+              font-size: 1.6rem;
+              margin: 16px 0;
+            }
+          }
+          .book__img {
+            max-width: 100px;
+          }
+        }
+      }
+    }
+  }
+  /* セミナーへの案内の部分============================== */
+  .guide {
+    .guide__inner {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 120px 32px 56px;
+      @media screen and (max-width: 450px) {
+        padding: 48px 16px 0;
+      }
+      .guide__title {
+        text-align: center;
+        color: f.$txt-color;
+        margin-bottom: 32px;
+        @media screen and (max-width: 450px) {
+          font-size: 2rem;
+        }
+      }
+      .guide__box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 24px;
+        background-color: f.$gold-color;
+        padding: 48px 32px 56px 32px;
+        position: relative;
+        @media screen and (max-width: 450px) {
+          padding: 24px 16px;
+        }
+        .guide__item {
+          border: 1px solid f.$txt-color;
+          border-left: none;
+          width: 420px;
+          padding: 4px;
+          position: relative;
+          margin-bottom: 12px;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 1px;
+            background-color: f.$txt-color;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 1px;
+            background-color: f.$txt-color;
+          }
+          .check__img {
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            transform: translate(0, -50%);
+          }
+          .item__inner {
+            background-color: f.$white-color;
+            padding: 16px 24px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            .guide__txt {
+              position: relative;
+            }
+          }
+        }
+      }
+      .arrow__under {
+        position: absolute;
+        bottom: -5%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, 0);
+      }
+      .guide__img {
+        text-align: center;
+        margin-top: 64px;
+        .guide__img--pc{
+          @media screen and (max-width: 450px) {
+           display: none;
+          }
+        }
+        .guide__img--sp{
+          display: none;
+          @media screen and (max-width: 450px) {
+           display: block;
+           margin-bottom: 60px;
+          }
+        }
+      }
+    }
+  }
+  /* お問合せの部分============================== */
+  .contact1 {
+    background-image: url(../img/bg_murai_02.jpg);
+    background-size: cover;
+    @media screen and (max-width: 450px) {
+      background-image: none;
+    }
+    .contact__inner {
+      padding: 56px 0 60px 0;
+      max-width: 800px;
+      margin: 0 auto;
+      @media screen and (max-width: 450px) {
+        padding: 0;
+      }
+      .content__top {
+        @media screen and (max-width: 450px) {
+          background-image: url(../img/bg_murai_02.jpg);
+          background-size: cover;
+          padding-bottom: 48px;
+        }
+        .date__box {
+          padding: 0 32px;
+          display: flex;
+          justify-content: space-between;
+          color: f.$white-color;
+          @media screen and (max-width: 800px) {
+            flex-direction: column;
+            justify-content: center;
+          }
+          .date__item {
+            display: flex;
+            padding: 0 32px;
+            align-items: center;
+            @media screen and (max-width: 800px) {
+              justify-content: center;
+            }
+            @media screen and (max-width: 800px) {
+              padding: 0;
+              justify-content: center;
+            }
+            .date__txt {
+              width: 180px;
+              font-size: 2.4rem;
+              color: f.$white-color;
+              @media screen and (max-width: 450px) {
+                flex-direction: column;
+                font-size: 1.6rem;
+                width: 130px;
+              }
+              .month {
+                font-size: 4.2rem;
+                @media screen and (max-width: 450px) {
+                  font-size: 2.6rem;
+                }
+              }
+              .date {
+                font-size: 5rem;
+                @media screen and (max-width: 450px) {
+                  font-size: 3.2rem;
+                }
+              }
+            }
+            .time {
+              color: f.$white-color;
+              .place {
+                display: block;
+                color: f.$white-color;
+              }
+            }
+            &:first-child {
+              border-right: 1px solid f.$white-color;
+              padding-right: 60px;
+              @media screen and (max-width: 800px) {
+                border-right: none;
+                padding-right: 0;
+                margin-bottom: 24px;
+                margin-top: 24px;
+              }
+            }
+          }
+        }
+        .present {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border: 1px solid f.$gray-border;
+          margin-top: 24px;
+          @media screen and (max-width: 800px) {
+            justify-content: center;
+            border: none;
+            padding: 0 32px;
+            column-gap: 24px;
+          }
+          .present__arrow {
+            width: 160px;
+            @media screen and (max-width: 800px) {
+              display: none;
+            }
+          }
+          .present__arrow--sp {
+            display: none;
+            @media screen and (max-width: 800px) {
+              display: block;
+              width: 90px;
+            }
+          }
+          .txt__box {
+            .present__txt {
+              max-width: 580px;
+              margin-left: 16px;
+              color: f.$gold-color;
+              font-size: 2.4rem;
+              @media screen and (max-width: 800px) {
+                margin-left: 0;
+              }
+              .sub__top {
+                color: f.$white-color;
+                display: block;
+                font-size: 1.6rem;
+              }
+              .sub__bottom {
+                color: f.$white-color;
+                font-size: 1.6rem;
+                margin-left: 16px;
+                @media screen and (max-width: 450px) {
+                  display: block;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+          .img__box {
+            display: flex;
+            align-items: flex-end;
+            
+            @media screen and (max-width: 450px) {
+              position: relative;
+            }
+            .figcap {
+              width: 100px;
+              color: f.$white-color;
+              position: absolute;
+              @media screen and (max-width: 450px) {
+                bottom: -10%;
+                left: -10%;
+              }
+            }
+            .present__img {
+              width: 100px;
+              padding-top: 16px;
+            }
+          }
+        }
+      }
+      .form {
+        font-size: 1.4rem;
+        padding-top: 32px;
+        @media screen and (max-width: 450px) {
+          background: f.$light-bage;
+          padding-bottom: 64px;
+        }
+        .title {
+          text-align: center;
+          color: f.$gold-color;
+          @media screen and (max-width: 450px) {
+            color: f.$arrow_gold-color;
+          }
+        }
+        .form__item {
+          padding: 0 32px;
+          display: flex;
+          @media screen and (max-width: 450px) {
+            flex-direction: column;
+          }
+        }
+        .label {
+          display: block;
+          margin-top: 40px;
+          width: 200px;
+          color: f.$white-color;
+          @media screen and (max-width: 450px) {
+            color: f.$txt-color;
+          }
+        }
+        .cap {
+          &::after {
+            content: "必須";
+            color: f.$white-color;
+            background: f.$arrow_gold-color;
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+            margin-left: 16px;
+            padding: 3px;
+          }
+        }
+        .img_box {
+          text-align: center;
+        }
+        .days {
+          margin-top: 60px;
+          text-align: left;
+        }
+        .mb30 {
+          margin-top: 30px;
+        }
+        .input {
+          padding: 0 16px;
+          margin-top: 24px;
+          line-height: 2;
+          width: 100%;
+          background-color: f.$white-color;
+          max-width: 600px;
+          height: 60px;
+          flex: 1;
+          @media screen and (max-width: 450px) {
+            margin-top: 16px;
+            height: auto;
+          }
+        }
+        .textarea {
+          padding: 8px 16px;
+          width: 100%;
+          margin-top: 24px;
+          background-color: f.$white-color;
+          max-width: 600px;
+          flex: 1;
+        }
+        .submit__box {
+          margin-top: 32px;
+          position: relative;
+          text-align: center;
+          @media screen and (max-width: 450px) {
+            width: 280px;
+            margin: 32px auto 0;
+          }
+          .submit {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  /* よくある質問の部分============================== */
+  .qa {
+    .qa__inner {
+      padding: 140px 32px 80px 32px;
+      max-width: 680px;
+      margin: 0 auto;
+      @media screen and (max-width: 450px) {
+        padding: 64px 32px 64px;
+      }
+      .qa__title {
+        color: f.$txt-color;
+        position: relative;
+        font-size: 4.6rem;
+        margin-bottom: 32px;
+        &::before {
+          position: absolute;
+          content: "Q&A";
+          color: f.$gold-color;
+          font-size: 1.8rem;
+          top: -20%;
+          left: 50%;
+          transform: translate(-50%, 0);
+        }
+      }
+      .qa__content {
+        .content__item {
+          font-size: 1.8rem;
+          .q__item {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            padding: 0 32px;
+            @media screen and (max-width: 450px) {
+              padding: 0px;
+            }
+            background-image: linear-gradient( to right, f.$txt-color, f.$txt-color 1px, transparent 1px, transparent 3px);
+            background-size: 8px 2px;
+            background-position: left top;
+            background-repeat: repeat-x;
+            .q__icon {
+              background-color: f.$white-color;
+              color: f.$gold-color;
+              border: 1px solid f.$gold-color;
+              padding: 8px;
+              border-radius: 4px;
+              margin-right: 16px;
+            }
+            .q__txt {
+              line-height: 1.5;
+              color: f.$gold-color;
+            }
+          }
+          .a__item {
+            display: flex;
+            align-items: center;
+            padding: 0 32px;
+            height: 100px;
+            background-image: linear-gradient( to right, f.$txt-color, f.$txt-color 1px, transparent 1px, transparent 3px);
+            background-size: 8px 2px;
+            background-position: left top;
+            background-repeat: repeat-x;
+            @media screen and (max-width: 450px) {
+              padding: 0px;
+            }
+            .a__icon {
+              background-color: f.$gold-color;
+              color: f.$white-color;
+              border: 1px solid f.$gold-color;
+              padding: 8px;
+              border-radius: 4px;
+              margin-right: 16px;
+            }
+            .a__txt {
+              line-height: 1.5;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* サブヘッダーの部分============================== */
+  .sub__header {
+    .sub__img {
+      width: 100%;
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+    }
+    .sub__img--sp {
+      display: none;
+      width: 100%;
+      @media screen and (max-width: 450px) {
+        display: block;
+      }
+    }
+  }
+  /* お問合せの部分============================== */
+  .contact2 {
+    background-image: url(../img/bg_murai_02.jpg);
+    background-size: cover;
+    @media screen and (max-width: 450px) {
+      background-image: none;
+    }
+    .contact__inner {
+      padding: 56px 0 60px 0;
+      max-width: 800px;
+      margin: 0 auto;
+      @media screen and (max-width: 450px) {
+        padding: 0;
+      }
+      .content__top {
+        @media screen and (max-width: 450px) {
+          background-image: url(../img/bg_murai_02.jpg);
+          background-size: cover;
+          padding-bottom: 48px;
+        }
+        .date__box {
+          padding: 0 32px;
+          display: flex;
+          justify-content: space-between;
+          color: f.$white-color;
+          @media screen and (max-width: 800px) {
+            flex-direction: column;
+            justify-content: center;
+          }
+          .date__item {
+            display: flex;
+            padding: 0 32px;
+            align-items: center;
+            @media screen and (max-width: 800px) {
+              justify-content: center;
+            }
+            @media screen and (max-width: 800px) {
+              padding: 0;
+              justify-content: center;
+            }
+            .date__txt {
+              width: 180px;
+              font-size: 2.4rem;
+              color: f.$white-color;
+              @media screen and (max-width: 450px) {
+                flex-direction: column;
+                font-size: 1.6rem;
+                width: 130px;
+              }
+              .month {
+                font-size: 4.2rem;
+                @media screen and (max-width: 450px) {
+                  font-size: 2.6rem;
+                }
+              }
+              .date {
+                font-size: 5rem;
+                @media screen and (max-width: 450px) {
+                  font-size: 3.2rem;
+                }
+              }
+            }
+            .time {
+              color: f.$white-color;
+              .place {
+                display: block;
+                color: f.$white-color;
+              }
+            }
+            &:first-child {
+              border-right: 1px solid f.$white-color;
+              padding-right: 60px;
+              @media screen and (max-width: 800px) {
+                border-right: none;
+                padding-right: 0;
+                margin-bottom: 24px;
+                margin-top: 24px;
+              }
+            }
+          }
+        }
+        .present {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          border: 1px solid f.$gray-border;
+          margin-top: 24px;
+          @media screen and (max-width: 800px) {
+            justify-content: center;
+            border: none;
+            padding: 0 32px;
+            column-gap: 24px;
+          }
+          .present__arrow {
+            width: 160px;
+            @media screen and (max-width: 800px) {
+              display: none;
+            }
+          }
+          .present__arrow--sp {
+            display: none;
+            @media screen and (max-width: 800px) {
+              display: block;
+              width: 90px;
+            }
+          }
+          .txt__box {
+            .present__txt {
+              max-width: 580px;
+              margin-left: 16px;
+              color: f.$gold-color;
+              font-size: 2.4rem;
+              @media screen and (max-width: 800px) {
+                margin-left: 0;
+              }
+              .sub__top {
+                color: f.$white-color;
+                display: block;
+                font-size: 1.6rem;
+              }
+              .sub__bottom {
+                color: f.$white-color;
+                font-size: 1.6rem;
+                margin-left: 16px;
+                @media screen and (max-width: 450px) {
+                  display: block;
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+          .img__box {
+            display: flex;
+            align-items: flex-end;
+            
+            @media screen and (max-width: 450px) {
+              position: relative;
+            }
+            .figcap {
+              width: 100px;
+              color: f.$white-color;
+              position: absolute;
+              @media screen and (max-width: 450px) {
+                bottom: -10%;
+                left: -10%;
+              }
+            }
+            .present__img {
+              width: 100px;
+              padding-top: 16px;
+            }
+          }
+        }
+      }
+      .form {
+        font-size: 1.4rem;
+        padding-top: 32px;
+        @media screen and (max-width: 450px) {
+          background: f.$light-bage;
+          padding-bottom: 64px;
+        }
+        .title {
+          text-align: center;
+          color: f.$gold-color;
+          @media screen and (max-width: 450px) {
+            color: f.$arrow_gold-color;
+          }
+        }
+        .form__item {
+          padding: 0 32px;
+          display: flex;
+          @media screen and (max-width: 450px) {
+            flex-direction: column;
+          }
+        }
+        .label {
+          display: block;
+          margin-top: 40px;
+          width: 200px;
+          color: f.$white-color;
+          @media screen and (max-width: 450px) {
+            color: f.$txt-color;
+          }
+        }
+        .cap {
+          &::after {
+            content: "必須";
+            color: f.$white-color;
+            background: f.$arrow_gold-color;
+            display: inline-block;
+            width: 40px;
+            text-align: center;
+            margin-left: 16px;
+            padding: 3px;
+          }
+        }
+        .img_box {
+          text-align: center;
+        }
+        .days {
+          margin-top: 60px;
+          text-align: left;
+        }
+        .mb30 {
+          margin-top: 30px;
+        }
+        .input {
+          padding: 0 16px;
+          margin-top: 24px;
+          line-height: 2;
+          width: 100%;
+          background-color: f.$white-color;
+          max-width: 600px;
+          height: 60px;
+          flex: 1;
+          @media screen and (max-width: 450px) {
+            margin-top: 16px;
+            height: auto;
+          }
+        }
+        .textarea {
+          padding: 8px 16px;
+          width: 100%;
+          margin-top: 24px;
+          background-color: f.$white-color;
+          max-width: 600px;
+          flex: 1;
+        }
+        .submit__box {
+          margin-top: 32px;
+          position: relative;
+          text-align: center;
+          @media screen and (max-width: 450px) {
+            width: 280px;
+            margin: 32px auto 0;
+          }
+          .submit {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
